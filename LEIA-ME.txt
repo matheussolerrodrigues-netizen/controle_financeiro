@@ -1,0 +1,26 @@
+# Controle Financeiro Pessoal — pacote para gerar EXE do Windows
+
+Este pacote contém o código e uma automação que compila o aplicativo em um computador Windows na nuvem. O computador que vai executar o EXE não precisa ter Python instalado.
+
+## Como obter o EXE (uma única preparação)
+
+1. Entre em https://github.com e crie uma conta gratuita, caso ainda não tenha.
+2. Crie um repositório novo chamado `controle-financeiro`.
+3. Envie todos os arquivos e pastas deste ZIP para o repositório, preservando a pasta `.github/workflows`.
+4. No repositório, abra a aba **Actions**.
+5. Selecione **Build Windows EXE** e clique em **Run workflow**.
+6. Quando terminar, abra a execução concluída e baixe o artefato **ControleFinanceiro-Windows**.
+7. Extraia o ZIP baixado. Dentro estará `ControleFinanceiro.exe`.
+
+## Para usar no Windows 11
+
+Dê dois cliques em `ControleFinanceiro.exe`. Na primeira execução, o Windows pode exibir o aviso do SmartScreen porque o programa não tem assinatura digital. Só execute se você tiver obtido o arquivo a partir do seu próprio repositório/compilação.
+
+O banco de dados é criado em:
+`%USERPROFILE%\ControleFinanceiro\financeiro.db`
+
+Faça backups pela aba **Backup** do aplicativo.
+
+## Observação importante
+
+Esta automação compila o código atual; ela não substitui testes no Windows. Esta é uma versão inicial, e as regras de fechamento automático de fatura e antecipação de parcelas ainda serão aprimoradas.
